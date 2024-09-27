@@ -1,0 +1,12 @@
+class Solution:
+    def findDiagonalOrder(self, nums: List[List[int]]) -> List[int]:
+        l=list()
+        l2=list()
+        for i in range(len(nums)):
+            for j in range(len(nums[i])):
+                t=(i+j,nums[i][j],j)
+                l.append(t)
+        l.sort(key = lambda x: (x[0],x[2]))
+        for i in l:
+            l2.append(i[1])
+        return l2

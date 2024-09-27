@@ -1,0 +1,7 @@
+class Solution:
+    def numSub(self, s: str) -> int:
+        l=s.split('0')
+        c=0
+        for i in l:
+            c+=(len(i)+1)*len(i)//2
+        return c%(10**9+7)
